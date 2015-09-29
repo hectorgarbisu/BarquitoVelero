@@ -6,7 +6,7 @@
 
 /**
  *
- * @author usuario
+ * @author Hector Garbisu
  */
 public class NewJFrame extends javax.swing.JFrame {
 
@@ -32,6 +32,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jSlider2 = new javax.swing.JSlider();
         jPanel2 = new javax.swing.JPanel();
+        panelGrafico1 = new PanelGrafico();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -45,14 +46,26 @@ public class NewJFrame extends javax.swing.JFrame {
         jSlider1.setMaximum(90);
         jSlider1.setMinimum(-90);
         jSlider1.setToolTipText("Orientación de la Vela");
+        jSlider1.setValue(0);
+        jSlider1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSlider1StateChanged(evt);
+            }
+        });
+        jSlider1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jSlider1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jSlider1MouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 10, Short.MAX_VALUE)
-                .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jSlider1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -67,6 +80,20 @@ public class NewJFrame extends javax.swing.JFrame {
         jSlider2.setMaximum(90);
         jSlider2.setMinimum(-90);
         jSlider2.setToolTipText("Orientación del timón");
+        jSlider2.setValue(0);
+        jSlider2.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSlider2StateChanged(evt);
+            }
+        });
+        jSlider2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jSlider2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jSlider2MouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -104,15 +131,26 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        javax.swing.GroupLayout panelGrafico1Layout = new javax.swing.GroupLayout(panelGrafico1);
+        panelGrafico1.setLayout(panelGrafico1Layout);
+        panelGrafico1Layout.setHorizontalGroup(
+            panelGrafico1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 302, Short.MAX_VALUE)
+        );
+        panelGrafico1Layout.setVerticalGroup(
+            panelGrafico1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 302, Short.MAX_VALUE)
+            .addComponent(panelGrafico1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(panelGrafico1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jLabel1.setText("Héctor Garbisu DIU 2015");
@@ -145,6 +183,37 @@ public class NewJFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
+        panelGrafico1.anguloVela = jSlider1.getValue()*Math.PI/180.0;
+        panelGrafico1.repaint();
+    }//GEN-LAST:event_jSlider1StateChanged
+
+    private void jSlider1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSlider1MouseEntered
+        panelGrafico1.focusVela = true;
+        panelGrafico1.repaint();
+    }//GEN-LAST:event_jSlider1MouseEntered
+
+    private void jSlider1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSlider1MouseExited
+        panelGrafico1.focusVela = false;
+        panelGrafico1.repaint();
+    }//GEN-LAST:event_jSlider1MouseExited
+
+    private void jSlider2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider2StateChanged
+        // TODO add your handling code here:
+        panelGrafico1.anguloTimon = jSlider2.getValue()*Math.PI/180.0;        
+        panelGrafico1.repaint();
+    }//GEN-LAST:event_jSlider2StateChanged
+
+    private void jSlider2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSlider2MouseEntered
+        panelGrafico1.focusTimon = true;
+        panelGrafico1.repaint();        
+    }//GEN-LAST:event_jSlider2MouseEntered
+
+    private void jSlider2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSlider2MouseExited
+        panelGrafico1.focusTimon = false;
+        panelGrafico1.repaint();        
+    }//GEN-LAST:event_jSlider2MouseExited
 
     /**
      * @param args the command line arguments
@@ -189,5 +258,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JSlider jSlider1;
     private javax.swing.JSlider jSlider2;
+    private PanelGrafico panelGrafico1;
     // End of variables declaration//GEN-END:variables
 }
