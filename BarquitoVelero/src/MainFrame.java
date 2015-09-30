@@ -26,109 +26,109 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jSlider1 = new javax.swing.JSlider();
-        jPanel4 = new javax.swing.JPanel();
-        jSlider2 = new javax.swing.JSlider();
-        jPanel2 = new javax.swing.JPanel();
+        PanelControl = new javax.swing.JPanel();
+        PanelVela = new javax.swing.JPanel();
+        SliderVela = new javax.swing.JSlider();
+        PanelTimon = new javax.swing.JPanel();
+        SliderTimon = new javax.swing.JSlider();
+        PanelDibujo = new javax.swing.JPanel();
         panelGrafico1 = new PanelGrafico();
-        jLabel1 = new javax.swing.JLabel();
+        Autor = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BarquitoVelero");
         setIconImage(new javax.swing.ImageIcon("src/barquitologo.png").getImage());
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Control"));
+        PanelControl.setBorder(javax.swing.BorderFactory.createTitledBorder("Control"));
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Orientación Vela"));
+        PanelVela.setBorder(javax.swing.BorderFactory.createTitledBorder("Orientación Vela"));
 
-        jSlider1.setMaximum(90);
-        jSlider1.setMinimum(-90);
-        jSlider1.setToolTipText("Orientación de la Vela");
-        jSlider1.setValue(0);
-        jSlider1.addChangeListener(new javax.swing.event.ChangeListener() {
+        SliderVela.setMaximum(90);
+        SliderVela.setMinimum(-90);
+        SliderVela.setToolTipText("Orientación de la Vela");
+        SliderVela.setValue(0);
+        SliderVela.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jSlider1StateChanged(evt);
+                SliderVelaStateChanged(evt);
             }
         });
-        jSlider1.addMouseListener(new java.awt.event.MouseAdapter() {
+        SliderVela.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jSlider1MouseEntered(evt);
+                SliderVelaMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jSlider1MouseExited(evt);
+                SliderVelaMouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSlider1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+        javax.swing.GroupLayout PanelVelaLayout = new javax.swing.GroupLayout(PanelVela);
+        PanelVela.setLayout(PanelVelaLayout);
+        PanelVelaLayout.setHorizontalGroup(
+            PanelVelaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(SliderVela, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        PanelVelaLayout.setVerticalGroup(
+            PanelVelaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelVelaLayout.createSequentialGroup()
+                .addComponent(SliderVela, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 22, Short.MAX_VALUE))
         );
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Orientación Timón"));
+        PanelTimon.setBorder(javax.swing.BorderFactory.createTitledBorder("Orientación Timón"));
 
-        jSlider2.setMaximum(90);
-        jSlider2.setMinimum(-90);
-        jSlider2.setToolTipText("Orientación del timón");
-        jSlider2.setValue(0);
-        jSlider2.addChangeListener(new javax.swing.event.ChangeListener() {
+        SliderTimon.setMaximum(90);
+        SliderTimon.setMinimum(-90);
+        SliderTimon.setToolTipText("Orientación del timón");
+        SliderTimon.setValue(0);
+        SliderTimon.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jSlider2StateChanged(evt);
+                SliderTimonStateChanged(evt);
             }
         });
-        jSlider2.addMouseListener(new java.awt.event.MouseAdapter() {
+        SliderTimon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jSlider2MouseEntered(evt);
+                SliderTimonMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jSlider2MouseExited(evt);
+                SliderTimonMouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSlider2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        javax.swing.GroupLayout PanelTimonLayout = new javax.swing.GroupLayout(PanelTimon);
+        PanelTimon.setLayout(PanelTimonLayout);
+        PanelTimonLayout.setHorizontalGroup(
+            PanelTimonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(SliderTimon, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        PanelTimonLayout.setVerticalGroup(
+            PanelTimonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelTimonLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(SliderTimon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout PanelControlLayout = new javax.swing.GroupLayout(PanelControl);
+        PanelControl.setLayout(PanelControlLayout);
+        PanelControlLayout.setHorizontalGroup(
+            PanelControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(PanelControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(PanelVela, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelTimon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        PanelControlLayout.setVerticalGroup(
+            PanelControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PanelVela, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PanelTimon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        PanelDibujo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         panelGrafico1.setForeground(new java.awt.Color(0, 0, 204));
 
@@ -143,18 +143,18 @@ public class MainFrame extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout PanelDibujoLayout = new javax.swing.GroupLayout(PanelDibujo);
+        PanelDibujo.setLayout(PanelDibujoLayout);
+        PanelDibujoLayout.setHorizontalGroup(
+            PanelDibujoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelGrafico1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        PanelDibujoLayout.setVerticalGroup(
+            PanelDibujoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelGrafico1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jLabel1.setText("Héctor Garbisu DIU 2015");
+        Autor.setText("Héctor Garbisu DIU 2015");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -163,10 +163,10 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addComponent(PanelControl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Autor))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PanelDibujo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -174,47 +174,47 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelDibujo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(PanelControl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 293, Short.MAX_VALUE)
-                        .addComponent(jLabel1)))
+                        .addComponent(Autor)))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
-        panelGrafico1.anguloVela = jSlider1.getValue()*Math.PI/180.0;
+    private void SliderVelaStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SliderVelaStateChanged
+        panelGrafico1.anguloVela = SliderVela.getValue()*Math.PI/180.0;
         panelGrafico1.repaint();
-    }//GEN-LAST:event_jSlider1StateChanged
+    }//GEN-LAST:event_SliderVelaStateChanged
 
-    private void jSlider1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSlider1MouseEntered
+    private void SliderVelaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SliderVelaMouseEntered
         panelGrafico1.focusVela = true;
         panelGrafico1.repaint();
-    }//GEN-LAST:event_jSlider1MouseEntered
+    }//GEN-LAST:event_SliderVelaMouseEntered
 
-    private void jSlider1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSlider1MouseExited
+    private void SliderVelaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SliderVelaMouseExited
         panelGrafico1.focusVela = false;
         panelGrafico1.repaint();
-    }//GEN-LAST:event_jSlider1MouseExited
+    }//GEN-LAST:event_SliderVelaMouseExited
 
-    private void jSlider2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider2StateChanged
+    private void SliderTimonStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SliderTimonStateChanged
         // TODO add your handling code here:
-        panelGrafico1.anguloTimon = jSlider2.getValue()*Math.PI/180.0;        
+        panelGrafico1.anguloTimon = SliderTimon.getValue()*Math.PI/180.0;        
         panelGrafico1.repaint();
-    }//GEN-LAST:event_jSlider2StateChanged
+    }//GEN-LAST:event_SliderTimonStateChanged
 
-    private void jSlider2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSlider2MouseEntered
+    private void SliderTimonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SliderTimonMouseEntered
         panelGrafico1.focusTimon = true;
         panelGrafico1.repaint();        
-    }//GEN-LAST:event_jSlider2MouseEntered
+    }//GEN-LAST:event_SliderTimonMouseEntered
 
-    private void jSlider2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSlider2MouseExited
+    private void SliderTimonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SliderTimonMouseExited
         panelGrafico1.focusTimon = false;
         panelGrafico1.repaint();        
-    }//GEN-LAST:event_jSlider2MouseExited
+    }//GEN-LAST:event_SliderTimonMouseExited
 
     /**
      * @param args the command line arguments
@@ -253,13 +253,13 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JSlider jSlider1;
-    private javax.swing.JSlider jSlider2;
+    private javax.swing.JLabel Autor;
+    private javax.swing.JPanel PanelControl;
+    private javax.swing.JPanel PanelDibujo;
+    private javax.swing.JPanel PanelTimon;
+    private javax.swing.JPanel PanelVela;
+    private javax.swing.JSlider SliderTimon;
+    private javax.swing.JSlider SliderVela;
     private PanelGrafico panelGrafico1;
     // End of variables declaration//GEN-END:variables
 }
