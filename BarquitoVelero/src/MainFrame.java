@@ -37,7 +37,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BarquitoVelero");
-        setIconImage(new javax.swing.ImageIcon("C:\\Users/usuario/Documents/NetBeansProjects/BarquitoVelero/BarquitoVelero/src/barquitologo.png").getImage());
+        setIconImage(new javax.swing.ImageIcon("src/barquitologo.png").getImage());
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Control"));
 
